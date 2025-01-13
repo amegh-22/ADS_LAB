@@ -1,8 +1,10 @@
+
+
 #include <stdio.h>
 #include <stdlib.h>
 int main()
 {
-    int s1, s2, A[10], B[10], i,j,k,C[30];
+    int s1, s2, A[10], B[10], i,j,k,C[30],x[20],y[20];
     printf("Enter the size of first array:");
     scanf("%d", &s1);
     printf("Enter the elements:\n");
@@ -37,19 +39,28 @@ int main()
         printf("%d\t", B[i]);
     }
 
+    for(i=0;i<s1;i++)
+    {
+        x[i]=A[i];
+    }
+    for(j=0;j<s2;j++)
+    {
+        y[j]=B[j];
+    }
+
 
 
 
     for(i=0;i<s1;i++)
     {
-        C[i]=A[i];
+        C[i]=x[i]*y[i];
     }
-    for(j=0;j<s2;j++)
-    {
-        C[s1+j]=B[j];
-    }
+    // for(j=0;j<s2+1;j++)
+    // {
+    //     C[s1+j]=B[s2-1-j];
+    // }
     printf("\nmerged Array:");
-    for(k=0;k<s1+s2;k++)
+    for(k=0;k<s1;k++)
     {
         printf("%d\t",C[k]);
     }

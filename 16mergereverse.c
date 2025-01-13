@@ -42,11 +42,11 @@ int main()
 
     for(i=0;i<s1;i++)
     {
-        C[i]=A[i];
+        C[i]=A[s1-1-i];
     }
     for(j=0;j<s2;j++)
     {
-        C[s1+j]=B[j];
+        C[s1+j]=B[s2-1-j];
     }
     printf("\nmerged Array:");
     for(k=0;k<s1+s2;k++)
