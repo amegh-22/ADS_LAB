@@ -3,7 +3,7 @@
 struct node{
     int data;
     struct node* next;
-}*temp=NULL,*head,*tail,*new;
+}*temp=NULL,*new;
 
 struct node* createnode(int data){
     new=(struct node*)malloc(sizeof(struct node));
@@ -13,7 +13,7 @@ struct node* createnode(int data){
 }
 
 struct node* mergelist(struct node* head1,struct node* head2){
-    temp=head1;
+    
     for(temp=head1;temp->next!=NULL;temp=temp->next){
     }
     temp->next=head2;
